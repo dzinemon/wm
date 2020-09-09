@@ -1,0 +1,35 @@
+<section class=" bg-light">
+  <div class="container">
+    <div class="row no-gutters">
+      <div class="col-lg-6 align-self-center section_lg">
+        <h2 class="text-secondary h2 mb-3 pr-5">Design & Build Your Own Landing Pages</h2>
+        <p class="text-info font-weight-light">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
+        </p>
+        <p class="text-info font-weight-light">
+          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+        </p>
+        <div class="mt-5">
+          <div class="row">
+            {% for item in (1..4) %}
+              <div class="col-6 mt-4">
+                <div class="media">
+                  <img src="/img/Icon.svg" class="mr-3" alt="...">
+                  <div class="media-body">
+                    <h5 class="mt-0">Title Goes Here</h5>
+                    <p class="text-muted small">
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 offset-lg-1 align-self-end">
+        <img class="w-100 obj-contain px-lg-3 px-2" src="/img/Vert.png" alt="Phone">
+      </div>
+    </div>
+  </div>
+</section>

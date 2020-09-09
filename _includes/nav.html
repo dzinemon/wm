@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light justify-content-md-between fixed-top">
+  <div class="container">
+
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto justify-content-md-between main-nav">
+        {% for item in site.data.navigation %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ item.href }}">{{ item.title}}</a>
+        </li>
+        {% endfor %}
+        <button class="btn btn-dark my-2 my-sm-0 d-sm-none" type="submit">Contact us</button>
+      </ul>
+    </div>
+
+    <div class="flex-grow-1">
+      <div class="d-flex justify-content-md-center justify-content-between">
+        <a class="navbar-brand text-primary font-weight-bold m-0" href="#">Wunder Mobility</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>  
+    </div> 
+    
+    <div class="navbar-nav d-none d-sm-block main-nav text-md-right">
+      <a class="btn btn-dark btn-sm my-2 my-sm-0  btn-mw-sm" href="#">Contact us</a>
+    </div>
+
+  </div>
+  </nav>

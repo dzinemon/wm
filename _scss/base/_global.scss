@@ -1,0 +1,90 @@
+/* Global */
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1.6;
+}
+
+
+.btn-mw-2xs {
+  min-width: 100px;
+}
+
+.btn-mw-xs {
+  min-width: 150px;
+}
+
+.btn-mw-sm {
+  min-width: 160px;
+}
+
+.btn-mw-lg {
+  min-width: 189px;
+}
+
+.hero-overlay {
+  background-image: url('/img/Path.svg');
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.hero-phone {
+  max-width: 110%;
+}
+
+
+.main-nav {
+  min-width: 245px;
+}
+
+
+
+.hero {
+  height: auto;
+  
+  @include media-breakpoint-up(lg) { 
+    height: 110vh;
+   }
+}
+
+.is-overlay {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.obj-cover {
+  object-fit: cover;
+}
+
+.obj-contain {
+  object-fit: contain;
+}
+
+.section {
+
+  &_xl {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  &_lg {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.pricing-overlay {
+  background-image: url(/img/Rectangle.svg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+

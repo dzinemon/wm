@@ -1,0 +1,8 @@
+
+.navbar {
+  transition: background-color 250ms ease-in-out;
+  .nav-bg-white & {
+    background-color: #fff;
+    box-shadow: 6px 3px 12px rgba(68, 68, 68, 0.05)
+  }
+}
