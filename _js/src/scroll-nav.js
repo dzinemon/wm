@@ -6,10 +6,10 @@ function checkPosition() {
   const hasBgClass = navbar.classList.contains('bg-white');
   const scrolledThrough = winnY >= navbarHeight
   if (scrolledThrough && !hasBgClass) {
-    document.body.classList.add('nav-bg-white')
+    document.body.classList.add('nav-bg-white');
   } else {
-    document.body.classList.remove('nav-bg-white')
+    document.body.classList.remove('nav-bg-white');
   }
 }
 
-window.addEventListener('scroll', checkPosition)
+window.addEventListener('scroll', checkPosition);
