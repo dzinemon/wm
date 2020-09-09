@@ -22,7 +22,7 @@ var paths = {
   scripts: {
     src: '_js/src/*.js',
     dest: '_site/js/dist/',
-    destsecond: 'js/dist/'
+    destsecond: './js/dist/'
   }
 };
 
@@ -49,11 +49,20 @@ function js() {
   return gulp.src([
     './node_modules/jquery/dist/jquery.min.js',
     './node_modules/popper.js/dist/umd/popper.min.js',
-    './node_modules/bootstrap/dist/js/bootstrap.min.js',
-    paths.scripts.src
+    './node_modules/bootstrap/dist/js/bootstrap.min.js'
+    // paths.scripts.src
   ])
   .pipe(concatjs('app.bundle.js'))
-  .pipe(gulp.dest(paths.scripts.dest))
+  .pipe(gulp.dest(paths.scripts.destsecond))
+  .pipe(browserSync.reload({stream:true}))
+}
+
+function mainJs() {
+  return gulp.src([
+    paths.scripts.src
+  ])
+  .pipe(concatjs('main.bundle.js'))
+  .pipe(gulp.dest(paths.scripts.destsecond))
   .pipe(browserSync.reload({stream:true}))
 }
 
@@ -73,7 +82,7 @@ function browserSyncReload(done) {
 
 function watch() {
   gulp.watch(paths.styles.src, style)
-  gulp.watch(paths.scripts.src, js)
+  gulp.watch(paths.scripts.src, gulp.series([js, mainJs]))
   gulp.watch(
     [
     '*.html',
@@ -86,4 +95,4 @@ function watch() {
   gulp.series(jekyllBuild, browserSyncReload));
 }
 
-gulp.task('default', gulp.parallel(jekyllBuild, browserSyncServe, watch))
+gulp.task('default', gulp.parallel(jekyllBuild, js, mainJs, browserSyncServe, watch))
