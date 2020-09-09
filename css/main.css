@@ -9826,6 +9826,12 @@ body {
   background-size: cover;
 }
 
+@media (max-width: 991.98px) {
+  .pricing-overlay {
+    background-size: 400%;
+  }
+}
+
 /* Page */
 /* Layout */
 .footer {
