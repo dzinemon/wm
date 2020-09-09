@@ -24,11 +24,7 @@ window.addEventListener("load", function () {
     xhr.open("GET", url, true);
     xhr.send();
   }
-
-  function outputElement(arr, num) {
-    return arr[num];
-  }
-
+  
   loadData();
 });
 
